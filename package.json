@@ -9,7 +9,8 @@
     "preview-https": "serve dist",
     "typecheck": "vue-tsc --noEmit",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "cy:test:storybook": "cypress run - headless -C cypress.storybook.json"
   },
   "dependencies": {
     "@vueuse/core": "^6.7.3",
