@@ -7,11 +7,14 @@
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "preview": "vite preview",
     "preview-https": "serve dist",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@vueuse/core": "^6.7.3",
     "@vueuse/head": "^0.6.0",
+    "cypress": "^8.6.0",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.0-rc.14",
@@ -24,12 +27,18 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.10.0",
+    "@babel/core": "^7.15.8",
     "@intlify/vite-plugin-vue-i18n": "^2.4.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/vue3": "^6.3.12",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^1.9.3",
     "@vue/compiler-sfc": "^3.2.20",
     "@vue/server-renderer": "^3.2.20",
+    "babel-loader": "^8.2.3",
     "critters": "^0.0.12",
     "cross-env": "^7.0.3",
     "eslint": "^8.0.1",
@@ -46,6 +55,7 @@
     "vite-plugin-pages": "^0.18.1",
     "vite-plugin-vue-layouts": "^0.5.0",
     "vite-ssg": "^0.15.5",
+    "vue-loader": "^16.8.1",
     "vue-tsc": "^0.28.7"
   }
 }
