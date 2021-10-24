@@ -1,4 +1,4 @@
-import TheNav from './TheNavigation.vue'
+import TheNav from '../examples/TheNavigation.vue'
 
 export default {
   title: 'Example/Navigation',
