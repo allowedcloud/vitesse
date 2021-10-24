@@ -11,8 +11,13 @@ const toggleLocales = () => {
 </script>
 
 <template>
-  <nav>
-    <!-- <router-link class="icon-btn mx-2" to="/" :title="t('button.home')">
+  <footer>
+    <nav aria-labelledby="footer-navigation">
+      Footer
+    </nav>
+  </footer>
+  <!-- <nav>
+    <router-link class="icon-btn mx-2" to="/" :title="t('button.home')">
       <carbon-campsite />
     </router-link>
 
@@ -27,6 +32,6 @@ const toggleLocales = () => {
 
     <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
       <carbon-language />
-    </a>-->
-  </nav>
+    </a>
+  </nav> -->
 </template>
