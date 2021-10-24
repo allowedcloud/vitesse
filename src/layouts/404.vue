@@ -7,7 +7,9 @@ const { t } = useI18n()
   <main>
     <router-view />
     <div>
-      <button @click="router.back()">{{ t('button.back') }}</button>
+      <button @click="router.back()">
+        {{ t('button.back') }}
+      </button>
     </div>
   </main>
 </template>

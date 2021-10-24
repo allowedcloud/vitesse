@@ -1,7 +1,7 @@
+@import './colors.css';
 @import './hard-reset.css';
-@import './markdown.css';
-@import './colors.css'
 @import './dark.css';
+@import './markdown.css';
 
 html,
 body,
@@ -9,6 +9,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: var(--red-5);
 }
 
 #nprogress {
@@ -16,8 +17,10 @@ body,
 }
 
 #nprogress .bar {
-  @apply bg-teal-600 opacity-75;
-
+  /* @apply bg-teal-600 opacity-75; */
+  
+  background-color: blue;
+  opacity: 50%;
   position: fixed;
   z-index: 1031;
   top: 0;
