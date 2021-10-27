@@ -1,19 +1,10 @@
 <script setup lang="ts">
-import { isDark, toggleDark } from '~/logic'
-
-const { t, availableLocales, locale } = useI18n()
-
-const toggleLocales = () => {
-  // change to some real logic
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
-}
 </script>
 
 <template>
   <footer>
     <nav aria-labelledby="footer-navigation">
-      Footer
+      &lt;TheFooter /&gt;
     </nav>
   </footer>
   <!-- <nav>
@@ -21,17 +12,34 @@ const toggleLocales = () => {
       <carbon-campsite />
     </router-link>
 
-    <button
-      class="icon-btn mx-2 !outline-none"
-      :title="t('button.toggle_dark')"
-      @click="toggleDark()"
-    >
-      <carbon-moon v-if="isDark" />
-      <carbon-sun v-else />
-    </button>
-
     <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
       <carbon-language />
     </a>
   </nav> -->
 </template>
+
+<style lang="postcss" scoepd>
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  padding: 1em 0;
+  text-align: center;
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: 14px;
+  border-top: 1px solid var(--green-8);
+  border-bottom: 1px solid var(--green-8);
+  border-right: 1px solid var(--green-8);
+  color: var(--green-7);
+}
+
+html.dark footer {
+  border-top: 1px solid var(--green-10);
+  border-right: 1px solid var(--green-10);
+  border-bottom: 1px solid var(--green-10);
+  color: var(--green-10);
+}
+</style>

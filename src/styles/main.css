@@ -4,11 +4,20 @@
 @import './markdown.css';
 
 html,
-body,
-#app {
-  height: 100%;
+body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+#app {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 #nprogress {
@@ -18,7 +27,7 @@ body,
 #nprogress .bar {
   /* @apply bg-teal-600 opacity-75; */
   
-  background-color: blue;
+  background-color: var(--indigo-8);
   opacity: 50%;
   position: fixed;
   z-index: 1031;

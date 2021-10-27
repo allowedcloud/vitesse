@@ -10,6 +10,8 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -54,9 +56,20 @@ export default defineConfig({
 
       // custom resolvers
       resolvers: [
+        // auto import icons
+        // https://github.com/antfu/unplugin-icons
+        IconsResolver({
+          componentPrefix: '',
+          // enabledCollections: ['carbon']
+        }),
       ],
 
       dts: 'src/components.d.ts',
+    }),
+
+    // https://github.com/antfu/unplugin-icons
+    Icons({
+      autoInstall: true,
     }),
 
     // https://github.com/antfu/vite-plugin-md
