@@ -31,6 +31,6 @@ html.dark footer {
   /* border-top: 1px solid var(--green-10);
   border-bottom: 1px solid var(--green-10); */
   border-right: 1px solid var(--green-10);
-  color: var(--green-10);
+  color: var(--green-9);
 }
 </style>
