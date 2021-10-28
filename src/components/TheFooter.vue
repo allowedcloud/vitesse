@@ -21,16 +21,16 @@ footer {
   font-variant: small-caps;
   font-weight: 600;
   font-size: 14px;
-  border-top: 1px solid var(--green-8);
-  border-bottom: 1px solid var(--green-8);
+  /* border-top: 1px solid var(--green-8);
+  border-bottom: 1px solid var(--green-8); */
   border-right: 1px solid var(--green-8);
   color: var(--green-7);
 }
 
 html.dark footer {
-  border-top: 1px solid var(--green-10);
+  /* border-top: 1px solid var(--green-10);
+  border-bottom: 1px solid var(--green-10); */
   border-right: 1px solid var(--green-10);
-  border-bottom: 1px solid var(--green-10);
   color: var(--green-10);
 }
 </style>
