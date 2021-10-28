@@ -24,16 +24,17 @@ module.exports = {
   ],
   // See issue
   // https://github.com/storybookjs/addon-postcss/issues/23#issuecomment-884810214
-  webpackFinal(webpackConfig) {
-    webpackConfig.module.rules.push({
+  webpackFinal: async (config) => {
+    config.module.rules.push({
       test: /\.postcss$/,
       sideEffects: true,
       use: [
-        require.resolve("style-loader"),
-        require.resolve("css-loader"),
-        require.resolve("postcss-loader")
-      ]
+        'style-loader',
+        'css-loader',
+        'postcss-loader'
+      ],
+      // include: path.resolve(__dirname, '../')
     })
-    return webpackConfig
+    return config
   }
 }

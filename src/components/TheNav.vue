@@ -16,17 +16,10 @@ const props = defineProps({
   },
 })
 
-const currentTime = () => {
-  return new Date().toLocaleTimeString(locale.value)
-}
-
-const now = ref('')
-watchEffect(() => {
-  setInterval(() => {
-    return now.value = currentTime()
-  }, 1000)
-})
-
+// const currentTime = ref('')
+// setInterval(() => {
+//   return currentTime.value = new Date().toLocaleTimeString(locale.value)
+// }, 1000)
 </script>
 
 <template>
@@ -57,12 +50,12 @@ watchEffect(() => {
             </span>
           </button>
         </div>
-        <div class="now">
+        <!-- <div class="now">
           <feather-clock />
           <span>
-            {{ now }}
+            {{ currentTime }}
           </span>
-        </div>
+        </div> -->
       </div>
     </nav>
   </header>
